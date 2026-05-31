@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+}
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+#articles-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.bio-article {
+    display: flex;
+    flex-direction: row;
+    background: #fafafa;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    padding: 1.5rem 2rem;
+    width: 800px;
+    max-width: 98vw;
+    margin: 0 auto;
+    transition: box-shadow 0.2s;
+    min-height: 340px;
+}
+.bio-article:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+.bio-meta {
+    flex: 0 0 140px;
+    border-right: 2px solid #e6b800;
+    margin-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 0.98rem;
+    color: #6b4c00;
+    padding-top: 0.5rem;
+    gap: 1.1rem;
+    min-width: 120px;
+}
+.bio-date, .bio-ages, .bio-genre, .bio-stars {
+    margin-bottom: 0.2rem;
+}
+.bio-stars {
+    color: #e6b800;
+    font-size: 1.1rem;
+}
+.bio-content {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.bio-content h2 {
+    color: #a12a2a;
+    font-size: 1.15rem;
+    margin: 0 0 0.5rem 0;
+    text-align: center;
+}
+.bio-content img {
+    width: 220px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 0.7rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+.bio-description {
+    font-size: 0.98rem;
+    color: #222;
+    text-align: center;
+    margin-top: 0.2rem;
+}
+@media (max-width: 900px) {
+    .bio-article {
+        flex-direction: column;
+        width: 98vw;
+        padding: 1rem 0.5rem;
+    }
+    .bio-meta {
+        flex-direction: row;
+        border-right: none;
+        border-bottom: 2px solid #e6b800;
+        margin-right: 0;
+        margin-bottom: 1rem;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        min-width: unset;
+        width: 100%;
+        padding-top: 0;
+    }
+    .bio-content img {
+        width: 90vw;
+        max-width: 220px;
+        height: auto;
+    }
+}
